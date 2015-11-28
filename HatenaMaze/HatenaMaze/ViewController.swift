@@ -12,7 +12,7 @@ import AudioToolbox
 
 
 class ViewController: UIViewController {
-    
+    var wholeArray: [AnyObject] = []
     var playerView: UIImageView!
     var playerMotionManager: CMMotionManager!
     var speedX: Double = 0.0
@@ -84,9 +84,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        for var i = 0; i<14;i++ {
-            blogImageView[i] = UIImageView()
-        }
+        
         
         isDuringGame = false
         
