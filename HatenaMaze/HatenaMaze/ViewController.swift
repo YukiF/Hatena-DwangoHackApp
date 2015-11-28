@@ -41,19 +41,19 @@ class ViewController: UIViewController {
     ]
     let mazePattern1 = [
         
-        [3, 1, 0, 1, 1, 2],
+        [3, 1, 1, 1, 1, 2],
         [0, 1, 0, 0, 0, 0],
-        [0, 0, 1, 0, 1, 0],
+        [0, 0, 1, 1, 1, 0],
         [1, 0, 1, 1, 0, 0],
-        [1, 0, 0, 1, 0, 1],
+        [1, 0, 1, 1, 0, 1],
         [0, 0, 1, 1, 0, 0],
         [0, 1, 1, 0, 1, 0],
         [0, 0, 0, 0, 1, 0],
         [1, 0, 1, 0, 0, 0],
-        [1, 0, 0, 1, 1, 1],
+        [1, 0, 1, 1, 1, 1],
     ]
     let mazePattern2 = [
-        [1, 0, 1, 0, 1, 1],
+        [1, 0, 1, 1, 1, 1],
         [1, 0, 0, 0, 0, 0],
         [1, 0, 1, 0, 1, 0],
         [3, 0, 1, 0, 1, 1],
@@ -84,7 +84,9 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         isDuringGame = false
         
-        mazeNumber = Int(arc4random_uniform(2))
+//        mazeNumber = Int(arc4random_uniform(2))
+        mazeNumber = 2
+
         
         switch mazeNumber {
         case 0:
@@ -127,7 +129,7 @@ class ViewController: UIViewController {
                 }
             }
         }
-        playerView = UIImageView(frame: CGRectMake(0 , 0, screenSize.width / 36, screenSize.height / 60))
+        playerView = UIImageView(frame: CGRectMake(0 , 0, screenSize.width / 15,screenSize.width / 15))
         let playerImage = UIImage(named: "hatenaPlayerView.png")
         playerView.image = playerImage
         playerView.center = startView.center
