@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		984A663D1C0961DC00E2CD57 /* ContentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984A663C1C0961DC00E2CD57 /* ContentsViewController.swift */; };
 		985641841C094C8300E06D20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985641831C094C8300E06D20 /* AppDelegate.swift */; };
 		985641861C094C8300E06D20 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985641851C094C8300E06D20 /* ViewController.swift */; };
 		985641891C094C8300E06D20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 985641871C094C8300E06D20 /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		984A663C1C0961DC00E2CD57 /* ContentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentsViewController.swift; path = ../ContentsViewController.swift; sourceTree = "<group>"; };
 		985641801C094C8300E06D20 /* HatenaMaze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HatenaMaze.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		985641831C094C8300E06D20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		985641851C094C8300E06D20 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				985641B11C09506500E06D20 /* Defaults-master */,
 				985641831C094C8300E06D20 /* AppDelegate.swift */,
 				985641851C094C8300E06D20 /* ViewController.swift */,
+				984A663C1C0961DC00E2CD57 /* ContentsViewController.swift */,
 				985641871C094C8300E06D20 /* Main.storyboard */,
 				9856418A1C094C8300E06D20 /* Assets.xcassets */,
 				9856418C1C094C8300E06D20 /* LaunchScreen.storyboard */,
@@ -279,6 +282,7 @@
 			files = (
 				985641861C094C8300E06D20 /* ViewController.swift in Sources */,
 				985641841C094C8300E06D20 /* AppDelegate.swift in Sources */,
+				984A663D1C0961DC00E2CD57 /* ContentsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,6 +507,7 @@
 				985641AA1C094C8300E06D20 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		985641AB1C094C8300E06D20 /* Build configuration list for PBXNativeTarget "HatenaMazeTests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +516,7 @@
 				985641AD1C094C8300E06D20 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		985641AE1C094C8300E06D20 /* Build configuration list for PBXNativeTarget "HatenaMazeUITests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +525,7 @@
 				985641B01C094C8300E06D20 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -70,11 +70,20 @@ class ViewController: UIViewController {
     var goalView: UIView!
     var startView: UIView!
     
+    var isDuringGame: Bool = false
+    
     var wallRectArray = [CGRect]()
+    var roadRectArray = [CGRect]()
+    
+    
+    var lastRoadTouch = NSUserDefaults.standardUserDefaults()
+    var lastRoadCenterPoint: CGPoint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        isDuringGame = false
+        
         mazeNumber = Int(arc4random_uniform(2))
         
         switch mazeNumber {
@@ -97,6 +106,9 @@ class ViewController: UIViewController {
         for y in 0 ..< maze.count {
             for x in 0 ..< maze[y].count {
                 switch maze[y][x] {
+                case 0:
+                    let roadView = createView(x: x, y: y, width: cellWidth, height: cellHeight, offsetX: cellOffsetX, offsetY: cellOffsetY)
+                    roadRectArray.append(roadView.frame)
                 case 1:
                     let wallView = createView(x: x, y: y, width: cellWidth, height: cellHeight, offsetX: cellOffsetX, offsetY: cellOffsetY)
                     wallView.backgroundColor = UIColor.blackColor()
@@ -127,6 +139,20 @@ class ViewController: UIViewController {
         
         self.startAccelerometer()
         
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        if isDuringGame == true {
+            // 加速度を始める
+            if !playerMotionManager.accelerometerActive {
+                self.startAccelerometer()
+            }
+            // スピードを初期化
+            speedX = 0.0
+            speedY = 0.0
+            playerView.center = CGPointFromString(lastRoadTouch.stringForKey("lastRoad")!)
+
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -175,16 +201,28 @@ class ViewController: UIViewController {
                 posY = self.screenSize.height - (self.playerView.frame.height / 2)
             }
             
+            for roadRect in self.roadRectArray {
+                if (CGRectIntersectsRect(roadRect,self.playerView.frame)){
+                    let view = UIView(frame: roadRect)
+                    self.lastRoadCenterPoint = view.center
+                    print(self.lastRoadCenterPoint)
+                }
+            }
+
+            
             for wallRect in self.wallRectArray {
                 if (CGRectIntersectsRect(wallRect,self.playerView.frame)){
                     AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
-                    self.gameCheck("GameOver", message: "壁に当たりました。")
+                    self.lastRoadTouch.setObject(NSStringFromCGPoint(self.lastRoadCenterPoint), forKey: "lastRoad")
+                    self.lastRoadTouch.synchronize()
+                    print(self.lastRoadTouch.stringForKey("lastRoad"))
+                    self.gameCheck("Stop!", message: "壁に当たりました。記事画面に進みます。", isClear: false)
                     return
                 }
             }
             
             if (CGRectIntersectsRect(self.goalView.frame,self.playerView.frame)){
-                self.gameCheck("Clear!",message: "クリアしました！")
+                self.gameCheck("Clear!",message: "クリアしました、検索画面に戻ります。", isClear: true)
                 return
             }
             self.playerView.center = CGPointMake(posX, posY)
@@ -194,34 +232,27 @@ class ViewController: UIViewController {
         
     }
     
-    func gameCheck(result:String,message:String){
+    func gameCheck(result:String,message:String,isClear:Bool){
         
         //加速度を止める
         if playerMotionManager.accelerometerActive {
             playerMotionManager.stopAccelerometerUpdates()
         }
-        
         let gameCheckAlert: UIAlertController = UIAlertController(title:result, message:message, preferredStyle: .Alert)
-        let retryAction = UIAlertAction(title: "もう一度", style: .Default) { action in
-            self.retry()
+        let okayAction = UIAlertAction(title: "OK", style: .Default) { action in
+            self.segue(isClear)
         }
-        
-        gameCheckAlert.addAction(retryAction)
+        gameCheckAlert.addAction(okayAction)
         self.presentViewController(gameCheckAlert, animated: true, completion: nil)
     }
     
-    func retry() {
-        
-        //　位置を初期化
-        playerView.center = startView.center
-        
-        // 加速度を始める
-        if !playerMotionManager.accelerometerActive {
-            self.startAccelerometer()
+    func segue(isClear:Bool) {
+        if isClear == false {
+            isDuringGame = true
+            self.performSegueWithIdentifier("toContents", sender: nil)
+        }else{
+           self.dismissViewControllerAnimated(true, completion: nil)
         }
-        // スピードを初期化
-        speedX = 0.0
-        speedY = 0.0
     }
     
 }
