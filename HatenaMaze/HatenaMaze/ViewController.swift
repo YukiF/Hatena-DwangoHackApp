@@ -26,26 +26,56 @@ class ViewController: UIViewController {
     4:ワープポイント
     5:ワープ移動ポイント
     */
-    let maze = [
-        [1, 0, 0, 0, 1, 1],
-        [1, 0, 1, 0, 1, 0],
-        [1, 0, 1, 0, 1, 0],
-        [1, 0, 1, 0, 0, 0],
-        [1, 0, 0, 1, 1, 0],
-        [1, 1, 0, 1, 1, 0],
-        [0, 0, 0, 1, 0, 0],
-        [0, 1, 1, 1, 0, 1],
-        [0, 0, 0, 1, 0, 0],
-        [1, 1, 3, 1, 1, 2],
+    let mazePettern = [
+        [
+            [1, 0, 0, 0, 1, 1],
+            [1, 0, 1, 0, 1, 0],
+            [1, 0, 1, 0, 1, 0],
+            [1, 0, 1, 0, 0, 0],
+            [1, 0, 0, 1, 1, 0],
+            [1, 1, 0, 1, 1, 0],
+            [0, 0, 0, 1, 0, 0],
+            [0, 1, 1, 1, 0, 1],
+            [0, 0, 0, 1, 0, 0],
+            [1, 1, 3, 1, 1, 2],
+        ],[
+            [1, 3, 0, 0, 1, 2],
+            [1, 0, 1, 0, 1, 0],
+            [1, 0, 1, 0, 1, 0],
+            [1, 0, 1, 0, 0, 0],
+            [1, 0, 0, 1, 1, 0],
+            [1, 1, 0, 1, 1, 0],
+            [0, 1, 1, 1, 0, 0],
+            [0, 1, 1, 1, 0, 1],
+            [0, 0, 0, 1, 0, 0],
+            [1, 1, 0, 1, 0, 0],
+        ],[
+            [1, 0, 0, 0, 1, 1],
+            [1, 0, 1, 0, 1, 0],
+            [1, 0, 1, 0, 1, 0],
+            [3, 0, 1, 0, 0, 0],
+            [1, 0, 0, 1, 1, 2],
+            [1, 1, 0, 1, 1, 0],
+            [0, 0, 0, 1, 0, 0],
+            [0, 1, 1, 1, 0, 1],
+            [0, 0, 0, 1, 0, 0],
+            [1, 1, 0, 1, 1, 0],
+        ]
     ]
+    
+    var mazeNumber: Int!
+    var maze = AnyObject[]
+    
     var goalView: UIView!
     var startView: UIView!
     
     var wallRectArray = [CGRect]()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        mazeNumber = Int(arc4random(uniform(2)))
+        maze = mazePettern[mazeNumber]
         
         let cellWidth = screenSize.width / CGFloat(maze[0].count) // 6
         let cellHeight = screenSize.height / CGFloat(maze.count)//10
@@ -87,12 +117,12 @@ class ViewController: UIViewController {
         self.startAccelerometer()
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     func createView(x x: Int, y: Int, width: CGFloat, height: CGFloat, offsetX: CGFloat = 0, offsetY: CGFloat = 0) -> UIView {
         let rect = CGRect(x: 0, y: 0, width: width, height: height)
         let view = UIView(frame: rect)
@@ -182,6 +212,6 @@ class ViewController: UIViewController {
         speedX = 0.0
         speedY = 0.0
     }
-
+    
 }
 
