@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A53BC3F1C0986A5006C81FC /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A53BC3E1C0986A5006C81FC /* WelcomeViewController.swift */; };
+		2A53BC411C099834006C81FC /* hatenaDesigniCon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A53BC401C099834006C81FC /* hatenaDesigniCon.png */; };
+		2A53BC421C099AAD006C81FC /* aqua.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 980FD0A11C098A17001C0457 /* aqua.ttf */; };
+		2A53BC451C099F01006C81FC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A53BC431C099F01006C81FC /* LoginViewController.swift */; };
+		2A53BC461C099F01006C81FC /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A53BC441C099F01006C81FC /* SignUpViewController.swift */; };
+		2A53BC481C09AEC1006C81FC /* o2Man.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2A53BC471C09AEC1006C81FC /* o2Man.caf */; };
+		74092D4485CADE7A4F9EAB69 /* Pods_HatenaMaze.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC797282719CD72A17A31DC /* Pods_HatenaMaze.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		980FD0A51C098A6F001C0457 /* icon120.png in Resources */ = {isa = PBXBuildFile; fileRef = 980FD0A31C098A6F001C0457 /* icon120.png */; };
+		980FD0A61C098A6F001C0457 /* icon180.png in Resources */ = {isa = PBXBuildFile; fileRef = 980FD0A41C098A6F001C0457 /* icon180.png */; };
 		984A663D1C0961DC00E2CD57 /* ContentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984A663C1C0961DC00E2CD57 /* ContentsViewController.swift */; };
 		984A663F1C0976A900E2CD57 /* hatenaPlayerView.png in Resources */ = {isa = PBXBuildFile; fileRef = 984A663E1C0976A900E2CD57 /* hatenaPlayerView.png */; };
 		985641841C094C8300E06D20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985641831C094C8300E06D20 /* AppDelegate.swift */; };
@@ -39,6 +48,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		15DDF67EE9788E388E2636CB /* Pods-HatenaMaze.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HatenaMaze.release.xcconfig"; path = "Pods/Target Support Files/Pods-HatenaMaze/Pods-HatenaMaze.release.xcconfig"; sourceTree = "<group>"; };
+		2A53BC3E1C0986A5006C81FC /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		2A53BC401C099834006C81FC /* hatenaDesigniCon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hatenaDesigniCon.png; sourceTree = "<group>"; };
+		2A53BC431C099F01006C81FC /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = "Defaults-master 2/LoginViewController.swift"; sourceTree = "<group>"; };
+		2A53BC441C099F01006C81FC /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = "Defaults-master 2/SignUpViewController.swift"; sourceTree = "<group>"; };
+		2A53BC471C09AEC1006C81FC /* o2Man.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = o2Man.caf; sourceTree = "<group>"; };
+		8AC797282719CD72A17A31DC /* Pods_HatenaMaze.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HatenaMaze.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		980FD0A11C098A17001C0457 /* aqua.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = aqua.ttf; sourceTree = "<group>"; };
+		980FD0A31C098A6F001C0457 /* icon120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon120.png; sourceTree = "<group>"; };
+		980FD0A41C098A6F001C0457 /* icon180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon180.png; sourceTree = "<group>"; };
 		984A663C1C0961DC00E2CD57 /* ContentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentsViewController.swift; path = ../ContentsViewController.swift; sourceTree = "<group>"; };
 		984A663E1C0976A900E2CD57 /* hatenaPlayerView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hatenaPlayerView.png; path = ../hatenaPlayerView.png; sourceTree = "<group>"; };
 		985641801C094C8300E06D20 /* HatenaMaze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HatenaMaze.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,6 +76,7 @@
 		985641B21C09506500E06D20 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		985641B31C09506500E06D20 /* Default-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-667h@2x.png"; sourceTree = "<group>"; };
 		985641B41C09506500E06D20 /* Default-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-736h@3x.png"; sourceTree = "<group>"; };
+		D1CBA815C848A3C0E791691C /* Pods-HatenaMaze.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HatenaMaze.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HatenaMaze/Pods-HatenaMaze.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74092D4485CADE7A4F9EAB69 /* Pods_HatenaMaze.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,9 +105,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1476C54383007BBF8AD93B56 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D1CBA815C848A3C0E791691C /* Pods-HatenaMaze.debug.xcconfig */,
+				15DDF67EE9788E388E2636CB /* Pods-HatenaMaze.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		55A13CDF5E70A2A40FAAC5C1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8AC797282719CD72A17A31DC /* Pods_HatenaMaze.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		980FD0A21C098A23001C0457 /* font */ = {
+			isa = PBXGroup;
+			children = (
+				980FD0A11C098A17001C0457 /* aqua.ttf */,
+			);
+			name = font;
+			sourceTree = "<group>";
+		};
 		984A66401C0976B600E2CD57 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				980FD0A31C098A6F001C0457 /* icon120.png */,
+				980FD0A41C098A6F001C0457 /* icon180.png */,
+				2A53BC401C099834006C81FC /* hatenaDesigniCon.png */,
 				984A663E1C0976A900E2CD57 /* hatenaPlayerView.png */,
 			);
 			name = images;
@@ -99,6 +148,8 @@
 				985641971C094C8300E06D20 /* HatenaMazeTests */,
 				985641A21C094C8300E06D20 /* HatenaMazeUITests */,
 				985641811C094C8300E06D20 /* Products */,
+				1476C54383007BBF8AD93B56 /* Pods */,
+				55A13CDF5E70A2A40FAAC5C1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -115,11 +166,16 @@
 		985641821C094C8300E06D20 /* HatenaMaze */ = {
 			isa = PBXGroup;
 			children = (
+				980FD0A21C098A23001C0457 /* font */,
 				984A66401C0976B600E2CD57 /* images */,
 				985641B11C09506500E06D20 /* Defaults-master */,
 				985641831C094C8300E06D20 /* AppDelegate.swift */,
+				2A53BC471C09AEC1006C81FC /* o2Man.caf */,
+				2A53BC3E1C0986A5006C81FC /* WelcomeViewController.swift */,
 				985641851C094C8300E06D20 /* ViewController.swift */,
 				984A663C1C0961DC00E2CD57 /* ContentsViewController.swift */,
+				2A53BC431C099F01006C81FC /* LoginViewController.swift */,
+				2A53BC441C099F01006C81FC /* SignUpViewController.swift */,
 				985641871C094C8300E06D20 /* Main.storyboard */,
 				9856418A1C094C8300E06D20 /* Assets.xcassets */,
 				9856418C1C094C8300E06D20 /* LaunchScreen.storyboard */,
@@ -164,9 +220,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 985641A81C094C8300E06D20 /* Build configuration list for PBXNativeTarget "HatenaMaze" */;
 			buildPhases = (
+				ADD323CD0CFD49C28B79AD43 /* Check Pods Manifest.lock */,
 				9856417C1C094C8300E06D20 /* Sources */,
 				9856417D1C094C8300E06D20 /* Frameworks */,
 				9856417E1C094C8300E06D20 /* Resources */,
+				E46CBAE8E8A00540860F3488 /* Embed Pods Frameworks */,
+				7EDF4143FC70324AC04B4973 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -225,6 +284,7 @@
 				TargetAttributes = {
 					9856417F1C094C8300E06D20 = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = ECGZQ9XKG7;
 					};
 					985641931C094C8300E06D20 = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -262,12 +322,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				9856418E1C094C8300E06D20 /* LaunchScreen.storyboard in Resources */,
+				2A53BC411C099834006C81FC /* hatenaDesigniCon.png in Resources */,
 				985641B51C09506500E06D20 /* Default-568h@2x.png in Resources */,
+				980FD0A51C098A6F001C0457 /* icon120.png in Resources */,
 				9856418B1C094C8300E06D20 /* Assets.xcassets in Resources */,
 				985641891C094C8300E06D20 /* Main.storyboard in Resources */,
+				2A53BC481C09AEC1006C81FC /* o2Man.caf in Resources */,
 				984A663F1C0976A900E2CD57 /* hatenaPlayerView.png in Resources */,
 				985641B61C09506500E06D20 /* Default-667h@2x.png in Resources */,
 				985641B71C09506500E06D20 /* Default-736h@3x.png in Resources */,
+				980FD0A61C098A6F001C0457 /* icon180.png in Resources */,
+				2A53BC421C099AAD006C81FC /* aqua.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,13 +352,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7EDF4143FC70324AC04B4973 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HatenaMaze/Pods-HatenaMaze-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ADD323CD0CFD49C28B79AD43 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E46CBAE8E8A00540860F3488 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HatenaMaze/Pods-HatenaMaze-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9856417C1C094C8300E06D20 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A53BC461C099F01006C81FC /* SignUpViewController.swift in Sources */,
 				985641861C094C8300E06D20 /* ViewController.swift in Sources */,
+				2A53BC3F1C0986A5006C81FC /* WelcomeViewController.swift in Sources */,
 				985641841C094C8300E06D20 /* AppDelegate.swift in Sources */,
+				2A53BC451C099F01006C81FC /* LoginViewController.swift in Sources */,
 				984A663D1C0961DC00E2CD57 /* ContentsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,23 +548,31 @@
 		};
 		985641A91C094C8300E06D20 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1CBA815C848A3C0E791691C /* Pods-HatenaMaze.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = HatenaMaze/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.futagami.HatenaMaze;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "8ae6fe46-2667-4d88-b1f7-c391f28bcdbe";
 			};
 			name = Debug;
 		};
 		985641AA1C094C8300E06D20 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 15DDF67EE9788E388E2636CB /* Pods-HatenaMaze.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = HatenaMaze/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.futagami.HatenaMaze;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "8ae6fe46-2667-4d88-b1f7-c391f28bcdbe";
 			};
 			name = Release;
 		};

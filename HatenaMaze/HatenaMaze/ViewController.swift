@@ -10,13 +10,14 @@ import UIKit
 import CoreMotion
 import AudioToolbox
 
+
 class ViewController: UIViewController {
-    
+    var wholeArray: [AnyObject] = []
     var playerView: UIImageView!
     var playerMotionManager: CMMotionManager!
     var speedX: Double = 0.0
     var speedY: Double = 0.0
-    
+
     let screenSize = UIScreen.mainScreen().bounds.size
     /*
     0:プレイヤーの通れる場所
@@ -41,19 +42,19 @@ class ViewController: UIViewController {
     ]
     let mazePattern1 = [
         
-        [3, 1, 0, 1, 1, 2],
+        [3, 1, 1, 1, 1, 2],
         [0, 1, 0, 0, 0, 0],
-        [0, 0, 1, 0, 1, 0],
+        [0, 0, 1, 1, 1, 0],
         [1, 0, 1, 1, 0, 0],
-        [1, 0, 0, 1, 0, 1],
+        [1, 0, 1, 1, 0, 1],
         [0, 0, 1, 1, 0, 0],
         [0, 1, 1, 0, 1, 0],
         [0, 0, 0, 0, 1, 0],
         [1, 0, 1, 0, 0, 0],
-        [1, 0, 0, 1, 1, 1],
+        [1, 0, 1, 1, 1, 1],
     ]
     let mazePattern2 = [
-        [1, 0, 1, 0, 1, 1],
+        [1, 0, 1, 1, 1, 1],
         [1, 0, 0, 0, 0, 0],
         [1, 0, 1, 0, 1, 0],
         [3, 0, 1, 0, 1, 1],
@@ -75,6 +76,7 @@ class ViewController: UIViewController {
     var wallRectArray = [CGRect]()
     var roadRectArray = [CGRect]()
     
+    var blogImageView: [UIImageView]!
     
     var lastRoadTouch = NSUserDefaults.standardUserDefaults()
     var lastRoadCenterPoint: CGPoint!
@@ -82,9 +84,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        print("WHOLEARRAY == \(wholeArray)")
+
         isDuringGame = false
         
-        mazeNumber = Int(arc4random_uniform(2))
+//        mazeNumber = Int(arc4random_uniform(2))
+        mazeNumber = 2
+
         
         switch mazeNumber {
         case 0:
@@ -114,6 +121,7 @@ class ViewController: UIViewController {
                     wallView.backgroundColor = UIColor.blackColor()
                     view.addSubview(wallView)
                     wallRectArray.append(wallView.frame)
+                    //wallView.addSubview(blogImageView)
                 case 2:
                     startView = createView(x: x, y: y, width: cellWidth, height: cellHeight, offsetX: cellOffsetX, offsetY: cellOffsetY)
                     startView.backgroundColor = UIColor.greenColor()
@@ -127,7 +135,8 @@ class ViewController: UIViewController {
                 }
             }
         }
-        playerView = UIImageView(frame: CGRectMake(0 , 0, screenSize.width / 36, screenSize.height / 60))
+        
+        playerView = UIImageView(frame: CGRectMake(0 , 0, screenSize.width / 15, screenSize.width / 15))
         let playerImage = UIImage(named: "hatenaPlayerView.png")
         playerView.image = playerImage
         playerView.center = startView.center
@@ -255,5 +264,8 @@ class ViewController: UIViewController {
         }
     }
     
+    
+ 
+
 }
 
