@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A53BC3F1C0986A5006C81FC /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A53BC3E1C0986A5006C81FC /* WelcomeViewController.swift */; };
 		74092D4485CADE7A4F9EAB69 /* Pods_HatenaMaze.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC797282719CD72A17A31DC /* Pods_HatenaMaze.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		984A663D1C0961DC00E2CD57 /* ContentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984A663C1C0961DC00E2CD57 /* ContentsViewController.swift */; };
 		984A663F1C0976A900E2CD57 /* hatenaPlayerView.png in Resources */ = {isa = PBXBuildFile; fileRef = 984A663E1C0976A900E2CD57 /* hatenaPlayerView.png */; };
@@ -41,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		15DDF67EE9788E388E2636CB /* Pods-HatenaMaze.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HatenaMaze.release.xcconfig"; path = "Pods/Target Support Files/Pods-HatenaMaze/Pods-HatenaMaze.release.xcconfig"; sourceTree = "<group>"; };
+		2A53BC3E1C0986A5006C81FC /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		8AC797282719CD72A17A31DC /* Pods_HatenaMaze.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HatenaMaze.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		984A663C1C0961DC00E2CD57 /* ContentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentsViewController.swift; path = ../ContentsViewController.swift; sourceTree = "<group>"; };
 		984A663E1C0976A900E2CD57 /* hatenaPlayerView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hatenaPlayerView.png; path = ../hatenaPlayerView.png; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				9856418A1C094C8300E06D20 /* Assets.xcassets */,
 				9856418C1C094C8300E06D20 /* LaunchScreen.storyboard */,
 				9856418F1C094C8300E06D20 /* Info.plist */,
+				2A53BC3E1C0986A5006C81FC /* WelcomeViewController.swift */,
 			);
 			path = HatenaMaze;
 			sourceTree = "<group>";
@@ -368,6 +371,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				985641861C094C8300E06D20 /* ViewController.swift in Sources */,
+				2A53BC3F1C0986A5006C81FC /* WelcomeViewController.swift in Sources */,
 				985641841C094C8300E06D20 /* AppDelegate.swift in Sources */,
 				984A663D1C0961DC00E2CD57 /* ContentsViewController.swift in Sources */,
 			);

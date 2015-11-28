@@ -10,13 +10,14 @@ import UIKit
 import CoreMotion
 import AudioToolbox
 
+
 class ViewController: UIViewController {
     
     var playerView: UIImageView!
     var playerMotionManager: CMMotionManager!
     var speedX: Double = 0.0
     var speedY: Double = 0.0
-    
+
     let screenSize = UIScreen.mainScreen().bounds.size
     /*
     0:プレイヤーの通れる場所
@@ -75,6 +76,7 @@ class ViewController: UIViewController {
     var wallRectArray = [CGRect]()
     var roadRectArray = [CGRect]()
     
+    var blogImageView: [UIImageView]!
     
     var lastRoadTouch = NSUserDefaults.standardUserDefaults()
     var lastRoadCenterPoint: CGPoint!
@@ -82,6 +84,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        for var i = 0; i<14;i++ {
+            blogImageView[i] = UIImageView()
+        }
+        
         isDuringGame = false
         
 //        mazeNumber = Int(arc4random_uniform(2))
@@ -116,6 +122,7 @@ class ViewController: UIViewController {
                     wallView.backgroundColor = UIColor.blackColor()
                     view.addSubview(wallView)
                     wallRectArray.append(wallView.frame)
+                    //wallView.addSubview(blogImageView)
                 case 2:
                     startView = createView(x: x, y: y, width: cellWidth, height: cellHeight, offsetX: cellOffsetX, offsetY: cellOffsetY)
                     startView.backgroundColor = UIColor.greenColor()
@@ -129,7 +136,8 @@ class ViewController: UIViewController {
                 }
             }
         }
-        playerView = UIImageView(frame: CGRectMake(0 , 0, screenSize.width / 15,screenSize.width / 15))
+        
+        playerView = UIImageView(frame: CGRectMake(0 , 0, screenSize.width / 15, screenSize.width / 15))
         let playerImage = UIImage(named: "hatenaPlayerView.png")
         playerView.image = playerImage
         playerView.center = startView.center
@@ -257,5 +265,8 @@ class ViewController: UIViewController {
         }
     }
     
+    
+ 
+
 }
 
