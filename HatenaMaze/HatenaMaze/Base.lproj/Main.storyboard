@@ -15,7 +15,6 @@
             <string>AquaGrotesque</string>
             <string>AquaGrotesque</string>
             <string>AquaGrotesque</string>
-            <string>AquaGrotesque</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -33,13 +32,16 @@
                                 <animations/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="lXY-Bh-ss1">
-                                <rect key="frame" x="96" y="501" width="128" height="47"/>
+                                <rect key="frame" x="96" y="518" width="128" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="AquaGrotesque" family="Aqua Grotesque" pointSize="22"/>
                                 <state key="normal" title="LOGOUT">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="logoutButtonPushed:" destination="zPr-GU-KaA" eventType="touchUpInside" id="iM3-aD-B7B"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WELCOME, username." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cMr-nt-Xdm">
                                 <rect key="frame" x="0.0" y="289" width="320" height="40"/>
@@ -50,7 +52,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="JCl-jx-cb9">
-                                <rect key="frame" x="1" y="367" width="319" height="95"/>
+                                <rect key="frame" x="1" y="415" width="319" height="95"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.29803921568627451" green="0.68627450980392157" blue="0.49411764705882355" alpha="1" colorSpace="calibratedRGB"/>
@@ -70,14 +72,14 @@
                     <connections>
                         <outlet property="usernameLabel" destination="cMr-nt-Xdm" id="9US-xo-Fcg"/>
                         <segue destination="BYZ-38-t0r" kind="push" identifier="toMaze" id="Trc-rE-BOK"/>
-                        <segue destination="Dfg-GH-NV3" kind="modal" id="S6x-Nu-yrX"/>
+                        <segue destination="2S6-e5-uGi" kind="modal" identifier="toNew" id="S6x-Nu-yrX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wdE-GO-as0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="448" y="408"/>
         </scene>
-        <!--View Controller-->
+        <!--WELCOME-->
         <scene sceneID="Bde-Sl-LRZ">
             <objects>
                 <viewController id="Dfg-GH-NV3" sceneMemberID="viewController">
@@ -91,7 +93,7 @@
                                 <animations/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Px4-Ot-Lsd">
-                                <rect key="frame" x="0.0" y="324" width="320" height="60"/>
+                                <rect key="frame" x="0.0" y="408" width="320" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.078431372550000003" green="0.61960784310000006" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -100,11 +102,11 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="jEa-l1-18e" kind="modal" id="AwR-9b-z7v"/>
+                                    <segue destination="jEa-l1-18e" kind="push" id="AwR-9b-z7v"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="cEo-QM-uG8">
-                                <rect key="frame" x="0.0" y="392" width="320" height="60"/>
+                                <rect key="frame" x="0.0" y="476" width="320" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.078431372550000003" green="0.61960784310000006" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -113,19 +115,20 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="lgu-R1-Me3" kind="modal" id="Wab-ac-6a8"/>
+                                    <segue destination="lgu-R1-Me3" kind="push" id="Wab-ac-6a8"/>
                                 </connections>
                             </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.2414229796" green="0.25165650480000001" blue="0.27485410830000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" title="WELCOME" id="9nx-LY-4Bc"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="thX-Ve-GKx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="448" y="1253"/>
+            <point key="canvasLocation" x="980" y="1253"/>
         </scene>
-        <!--Sign Up View Controller-->
+        <!--新規ユーザー登録-->
         <scene sceneID="zrz-8C-9gy">
             <objects>
                 <viewController id="jEa-l1-18e" customClass="SignUpViewController" customModule="HatenaMaze" customModuleProvider="target" sceneMemberID="viewController">
@@ -133,20 +136,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SIGN UP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eds-di-Lc4">
-                                <rect key="frame" x="20" y="42" width="125" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" name="AquaGrotesque" family="Aqua Grotesque" pointSize="20"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="PASSWORD" textAlignment="natural" minimumFontSize="17" id="u8V-88-PqG">
                                 <rect key="frame" x="53" y="174" width="214" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="USERNAME" textAlignment="natural" minimumFontSize="17" id="cPg-vW-gwM">
                                 <rect key="frame" x="53" y="117" width="214" height="30"/>
@@ -172,6 +167,7 @@
                         <animations/>
                         <color key="backgroundColor" red="0.2414229796" green="0.25165650480000001" blue="0.27485410830000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" title="新規ユーザー登録" id="RQ1-Bk-qxQ"/>
                     <connections>
                         <outlet property="passwordTextField" destination="u8V-88-PqG" id="Npy-dz-F5u"/>
                         <outlet property="usernameTextField" destination="cPg-vW-gwM" id="E34-Ah-H57"/>
@@ -179,9 +175,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ta-6d-Aln" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1016" y="1085"/>
+            <point key="canvasLocation" x="1548" y="1085"/>
         </scene>
-        <!--Login View Controller-->
+        <!--ログイン-->
         <scene sceneID="dQz-am-r18">
             <objects>
                 <viewController id="lgu-R1-Me3" customClass="LoginViewController" customModule="HatenaMaze" customModuleProvider="target" sceneMemberID="viewController">
@@ -189,14 +185,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOGIN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dTt-U1-huR">
-                                <rect key="frame" x="20" y="37" width="125" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" name="AquaGrotesque" family="Aqua Grotesque" pointSize="20"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="USERNAME" textAlignment="natural" minimumFontSize="17" id="mgj-Bb-Yd8">
                                 <rect key="frame" x="53" y="112" width="214" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -209,7 +197,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="l4Z-Lg-N2B">
                                 <rect key="frame" x="0.0" y="231" width="320" height="60"/>
@@ -228,10 +216,15 @@
                         <animations/>
                         <color key="backgroundColor" red="0.2414229796" green="0.25165650480000001" blue="0.27485410830000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" title="ログイン" id="mTQ-35-akh"/>
+                    <connections>
+                        <outlet property="passwordTextField" destination="jz9-99-ABu" id="SyM-ab-mUc"/>
+                        <outlet property="usernameTextField" destination="mgj-Bb-Yd8" id="GAd-de-Qau"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AAg-UU-eqe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1016" y="1713"/>
+            <point key="canvasLocation" x="1548" y="1713"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -271,13 +264,28 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="G6y-3k-MkM">
-                                        <rect key="frame" x="23" y="14" width="73" height="43"/>
+                                        <rect key="frame" x="8" y="11" width="73" height="49"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="AquaGrotesque" family="Aqua Grotesque" pointSize="20"/>
                                         <state key="normal" title="O2!">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="sendO2" destination="QMj-h2-Apv" eventType="touchUpInside" id="Qam-Kz-AKc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="q7q-CI-sQx">
+                                        <rect key="frame" x="89" y="11" width="73" height="49"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" name="AquaGrotesque" family="Aqua Grotesque" pointSize="20"/>
+                                        <state key="normal" title="B!">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="bookmark" destination="QMj-h2-Apv" eventType="touchUpInside" id="7BC-G6-kTE"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <animations/>
@@ -311,6 +319,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aAr-wv-1IW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-84" y="408"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cR7-fI-6VO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2S6-e5-uGi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3i1-hR-Rhg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Dfg-GH-NV3" kind="relationship" relationship="rootViewController" id="DMz-7C-ipY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KHs-uU-Lgx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="448" y="1253"/>
         </scene>
     </scenes>
     <resources>

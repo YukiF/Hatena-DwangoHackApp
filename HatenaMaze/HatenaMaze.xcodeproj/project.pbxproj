@@ -12,6 +12,7 @@
 		2A53BC421C099AAD006C81FC /* aqua.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 980FD0A11C098A17001C0457 /* aqua.ttf */; };
 		2A53BC451C099F01006C81FC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A53BC431C099F01006C81FC /* LoginViewController.swift */; };
 		2A53BC461C099F01006C81FC /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A53BC441C099F01006C81FC /* SignUpViewController.swift */; };
+		2A53BC481C09AEC1006C81FC /* o2Man.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2A53BC471C09AEC1006C81FC /* o2Man.caf */; };
 		74092D4485CADE7A4F9EAB69 /* Pods_HatenaMaze.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC797282719CD72A17A31DC /* Pods_HatenaMaze.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		980FD0A51C098A6F001C0457 /* icon120.png in Resources */ = {isa = PBXBuildFile; fileRef = 980FD0A31C098A6F001C0457 /* icon120.png */; };
 		980FD0A61C098A6F001C0457 /* icon180.png in Resources */ = {isa = PBXBuildFile; fileRef = 980FD0A41C098A6F001C0457 /* icon180.png */; };
@@ -52,6 +53,7 @@
 		2A53BC401C099834006C81FC /* hatenaDesigniCon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hatenaDesigniCon.png; sourceTree = "<group>"; };
 		2A53BC431C099F01006C81FC /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = "Defaults-master 2/LoginViewController.swift"; sourceTree = "<group>"; };
 		2A53BC441C099F01006C81FC /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = "Defaults-master 2/SignUpViewController.swift"; sourceTree = "<group>"; };
+		2A53BC471C09AEC1006C81FC /* o2Man.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = o2Man.caf; sourceTree = "<group>"; };
 		8AC797282719CD72A17A31DC /* Pods_HatenaMaze.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HatenaMaze.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		980FD0A11C098A17001C0457 /* aqua.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = aqua.ttf; sourceTree = "<group>"; };
 		980FD0A31C098A6F001C0457 /* icon120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon120.png; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 				984A66401C0976B600E2CD57 /* images */,
 				985641B11C09506500E06D20 /* Defaults-master */,
 				985641831C094C8300E06D20 /* AppDelegate.swift */,
+				2A53BC471C09AEC1006C81FC /* o2Man.caf */,
 				2A53BC3E1C0986A5006C81FC /* WelcomeViewController.swift */,
 				985641851C094C8300E06D20 /* ViewController.swift */,
 				984A663C1C0961DC00E2CD57 /* ContentsViewController.swift */,
@@ -281,6 +284,7 @@
 				TargetAttributes = {
 					9856417F1C094C8300E06D20 = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = ECGZQ9XKG7;
 					};
 					985641931C094C8300E06D20 = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -323,6 +327,7 @@
 				980FD0A51C098A6F001C0457 /* icon120.png in Resources */,
 				9856418B1C094C8300E06D20 /* Assets.xcassets in Resources */,
 				985641891C094C8300E06D20 /* Main.storyboard in Resources */,
+				2A53BC481C09AEC1006C81FC /* o2Man.caf in Resources */,
 				984A663F1C0976A900E2CD57 /* hatenaPlayerView.png in Resources */,
 				985641B61C09506500E06D20 /* Default-667h@2x.png in Resources */,
 				985641B71C09506500E06D20 /* Default-736h@3x.png in Resources */,
@@ -546,10 +551,13 @@
 			baseConfigurationReference = D1CBA815C848A3C0E791691C /* Pods-HatenaMaze.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = HatenaMaze/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.futagami.HatenaMaze;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "8ae6fe46-2667-4d88-b1f7-c391f28bcdbe";
 			};
 			name = Debug;
 		};
@@ -558,10 +566,13 @@
 			baseConfigurationReference = 15DDF67EE9788E388E2636CB /* Pods-HatenaMaze.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = HatenaMaze/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.futagami.HatenaMaze;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "8ae6fe46-2667-4d88-b1f7-c391f28bcdbe";
 			};
 			name = Release;
 		};

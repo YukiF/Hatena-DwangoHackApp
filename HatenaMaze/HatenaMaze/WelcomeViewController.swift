@@ -10,13 +10,14 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 import Parse
+import SVProgressHUD
 
 class WelcomeViewController: UIViewController {
     @IBOutlet var usernameLabel: UILabel!
     var wholeArray: [AnyObject] = []
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        SVProgressHUD.show()
         wholeArray = []
         self.getPopularBlogEntryURL()
         // Do any additional setup after loading the view.
@@ -53,6 +54,7 @@ class WelcomeViewController: UIViewController {
                     print(webPageUrl)
                     
                     self.getWebImageURL(webPageUrl!,number: i,title: webTitle!)
+                    SVProgressHUD.dismiss()
                 }
                 
                 /*if let JSON = JSON(data: response.result.value) {
@@ -61,6 +63,7 @@ class WelcomeViewController: UIViewController {
                 }*/
         }
     }
+    
     
     
     /*[メソッド]getWebImageURL
@@ -83,6 +86,7 @@ class WelcomeViewController: UIViewController {
                     //self.blogImageView[number].sd_setImageWithURL(imageURL!)
                     self.wholeArray.append(["title":title,"webPageUrl":pageUrl,"imageUrl":imageURL!])
                 }
+                
         }
     }
     
@@ -97,6 +101,10 @@ class WelcomeViewController: UIViewController {
         }
     }
     
+    @IBAction func logoutButtonPushed(sender: AnyObject) {
+        PFUser.logOut()
+        SVProgressHUD.showInfoWithStatus("ログアウトしました", maskType: .Black)
+    }
 
     /*
     // MARK: - Navigation

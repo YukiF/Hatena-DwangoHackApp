@@ -25,7 +25,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginButtonPushed(sender: UIButton) {
-        
+        self.login()
     }
     
     func login() {
