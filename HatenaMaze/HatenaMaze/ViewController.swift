@@ -26,46 +26,47 @@ class ViewController: UIViewController {
     4:ワープポイント
     5:ワープ移動ポイント
     */
-    let mazePettern = [
-        [
-            [1, 0, 0, 0, 1, 1],
-            [1, 0, 1, 0, 1, 0],
-            [1, 0, 1, 0, 1, 0],
-            [1, 0, 1, 0, 0, 0],
-            [1, 0, 0, 1, 1, 0],
-            [1, 1, 0, 1, 1, 0],
-            [0, 0, 0, 1, 0, 0],
-            [0, 1, 1, 1, 0, 1],
-            [0, 0, 0, 1, 0, 0],
-            [1, 1, 3, 1, 1, 2],
-        ],[
-            [1, 3, 0, 0, 1, 2],
-            [1, 0, 1, 0, 1, 0],
-            [1, 0, 1, 0, 1, 0],
-            [1, 0, 1, 0, 0, 0],
-            [1, 0, 0, 1, 1, 0],
-            [1, 1, 0, 1, 1, 0],
-            [0, 1, 1, 1, 0, 0],
-            [0, 1, 1, 1, 0, 1],
-            [0, 0, 0, 1, 0, 0],
-            [1, 1, 0, 1, 0, 0],
-        ],[
-            [1, 0, 0, 0, 1, 1],
-            [1, 0, 1, 0, 1, 0],
-            [1, 0, 1, 0, 1, 0],
-            [3, 0, 1, 0, 0, 0],
-            [1, 0, 0, 1, 1, 2],
-            [1, 1, 0, 1, 1, 0],
-            [0, 0, 0, 1, 0, 0],
-            [0, 1, 1, 1, 0, 1],
-            [0, 0, 0, 1, 0, 0],
-            [1, 1, 0, 1, 1, 0],
-        ]
+    let mazePattern0 = [
+        
+        [1, 0, 0, 0, 1, 1],
+        [1, 0, 1, 0, 1, 0],
+        [1, 0, 1, 0, 1, 0],
+        [1, 0, 1, 0, 0, 0],
+        [1, 0, 0, 1, 1, 0],
+        [1, 1, 0, 1, 1, 0],
+        [0, 0, 0, 1, 0, 0],
+        [0, 1, 1, 1, 0, 1],
+        [0, 0, 0, 1, 0, 0],
+        [1, 1, 3, 1, 1, 2],
+    ]
+    let mazePattern1 = [
+        
+        [3, 1, 0, 1, 1, 2],
+        [0, 1, 0, 0, 0, 0],
+        [0, 0, 1, 0, 1, 0],
+        [1, 0, 1, 1, 0, 0],
+        [1, 0, 0, 1, 0, 1],
+        [0, 0, 1, 1, 0, 0],
+        [0, 1, 1, 0, 1, 0],
+        [0, 0, 0, 0, 1, 0],
+        [1, 0, 1, 0, 0, 0],
+        [1, 0, 0, 1, 1, 1],
+    ]
+    let mazePattern2 = [
+        [1, 0, 1, 0, 1, 1],
+        [1, 0, 0, 0, 0, 0],
+        [1, 0, 1, 0, 1, 0],
+        [3, 0, 1, 0, 1, 1],
+        [1, 0, 1, 0, 1, 2],
+        [1, 1, 1, 0, 1, 0],
+        [0, 0, 1, 0, 1, 0],
+        [0, 1, 1, 0, 1, 0],
+        [0, 0, 0, 0, 0, 0],
+        [1, 1, 0, 1, 1, 0],
     ]
     
     var mazeNumber: Int!
-    var maze = AnyObject[]
-    
+    var maze: [[Int]]!
     var goalView: UIView!
     var startView: UIView!
     
@@ -74,8 +75,18 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        mazeNumber = Int(arc4random(uniform(2)))
-        maze = mazePettern[mazeNumber]
+        mazeNumber = Int(arc4random_uniform(2))
+        
+        switch mazeNumber {
+        case 0:
+            self.maze = mazePattern0
+        case 1:
+            self.maze = mazePattern1
+        case 2:
+            self.maze = mazePattern2
+        default:
+            break
+        }
         
         let cellWidth = screenSize.width / CGFloat(maze[0].count) // 6
         let cellHeight = screenSize.height / CGFloat(maze.count)//10
