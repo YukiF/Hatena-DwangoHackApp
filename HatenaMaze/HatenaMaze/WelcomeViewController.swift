@@ -12,11 +12,10 @@ import SwiftyJSON
 import SDWebImage
 
 class WelcomeViewController: UIViewController {
-    
+    var wholeArray: [AnyObject] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         self.getPopularBlogEntryURL()
-        
         // Do any additional setup after loading the view.
     }
 
@@ -33,9 +32,10 @@ class WelcomeViewController: UIViewController {
                 let json = JSON(data: response.data!)
                 for var i = 0;i<15;i++ {
                     let webPageUrl = json["responseData"]["feed"]["entries"][i]["link"].string
-                    
+                    let webTitle = json["responseData"]["feed"]["entries"][i]["title"].string
                     print(webPageUrl)
-                    self.getWebImageURL(webPageUrl!,number: i)
+                    
+                    self.getWebImageURL(webPageUrl!,number: i,title: webTitle!)
                 }
                 
                 /*if let JSON = JSON(data: response.result.value) {
@@ -50,7 +50,7 @@ class WelcomeViewController: UIViewController {
     【入力】ウェブページのURL（String型）
     　【出力】サムネイル画像のURL（String型）
     */
-    func getWebImageURL(pageUrl:String,number:Int) {
+    func getWebImageURL(pageUrl:String,number:Int,title:String) {
         Alamofire.request(.GET, "http://api.hitonobetsu.com/ogp/analysis", parameters: ["url": pageUrl])
             .responseJSON { response in
                 print(response.request)  // original URL request
@@ -64,10 +64,21 @@ class WelcomeViewController: UIViewController {
                     print("webURL: \(webUrl)")
                     let imageURL = NSURL(string: webUrl)
                     //self.blogImageView[number].sd_setImageWithURL(imageURL!)
+                    self.wholeArray.append(["title":title,"webPageUrl":pageUrl,"imageUrl":imageURL!])
                 }
         }
     }
+    
+    @IBAction func goNextPage(sender: UIButton){
+        self.performSegueWithIdentifier("toMaze", sender: nil)
+    }
 
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "toMaze" {
+            let mazeView = segue.destinationViewController as! ViewController
+            mazeView.wholeArray = self.wholeArray
+        }
+    }
     
 
     /*
