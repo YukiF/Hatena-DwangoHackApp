@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "39E50571E1E3D66AA28078D6"
+               BlueprintIdentifier = "B064F164898A888BE065DED3"
                BuildableName = "Pods_HatenaMaze.framework"
                BlueprintName = "Pods-HatenaMaze"
                ReferencedContainer = "container:Pods.xcodeproj">

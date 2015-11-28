@@ -8,34 +8,51 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>0</integer>
+		</dict>
+		<key>Bolts.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Parse.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-HatenaMaze.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>1</integer>
 		</dict>
 		<key>SDWebImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>2</integer>
+		</dict>
+		<key>SVProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>SwiftyJSON.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>3</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>236B32E6AFF84409733D7120B8F6ABBD</key>
+		<key>01801AE4BFA89B0734AA1F1C49A8E716</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8137AD2815B01AAA2CFD7F752B34E34A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8520FDB4CAA1A76AC7EB2E8D57E9A4D7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -45,12 +62,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>A064B75A9838606659BB57FE5AC8A101</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>B9A04D3C9B208813656510FDA8ADAE02</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DB03243BC551D111E435DB20EDB96596</key>
+		<key>D649929D50ED4A56F70A4C898B2C83C2</key>
 		<dict>
 			<key>primary</key>
 			<true/>

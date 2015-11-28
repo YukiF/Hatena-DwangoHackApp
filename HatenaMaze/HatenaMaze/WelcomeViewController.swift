@@ -9,15 +9,31 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
-import SDWebImage
+import Parse
 
 class WelcomeViewController: UIViewController {
+    @IBOutlet var usernameLabel: UILabel!
     var wholeArray: [AnyObject] = []
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         wholeArray = []
         self.getPopularBlogEntryURL()
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController!.navigationBarHidden = true
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        if PFUser.currentUser() == nil {
+            self.performSegueWithIdentifier("toNew", sender: nil)
+        }else{
+            usernameLabel.text = "Welcome,\(PFUser.currentUser()?.username!)"
+        }
     }
 
     override func didReceiveMemoryWarning() {
