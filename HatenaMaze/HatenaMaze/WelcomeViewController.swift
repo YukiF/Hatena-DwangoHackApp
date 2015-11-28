@@ -15,6 +15,7 @@ class WelcomeViewController: UIViewController {
     var wholeArray: [AnyObject] = []
     override func viewDidLoad() {
         super.viewDidLoad()
+        wholeArray = []
         self.getPopularBlogEntryURL()
         // Do any additional setup after loading the view.
     }

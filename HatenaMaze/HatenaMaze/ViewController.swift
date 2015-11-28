@@ -85,7 +85,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        
+        print("WHOLEARRAY == \(wholeArray)")
         isDuringGame = false
         
 //        mazeNumber = Int(arc4random_uniform(2))
