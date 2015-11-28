@@ -4,30 +4,34 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="aqua.ttf">
+            <string>AquaGrotesque</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Welcome View Controller-->
         <scene sceneID="aaV-re-tKF">
             <objects>
-                <viewController id="zPr-GU-KaA" sceneMemberID="viewController">
+                <viewController id="zPr-GU-KaA" customClass="WelcomeViewController" customModule="HatenaMaze" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HgU-FI-WhM">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" id="qlQ-4U-QNL">
-                                <rect key="frame" x="0.0" y="158" width="320" height="216"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="JCl-jx-cb9">
-                                <rect key="frame" x="130" y="418" width="60" height="30"/>
+                                <rect key="frame" x="0.0" y="236" width="319" height="95"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="迷路作成"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="modal" modalTransitionStyle="flipHorizontal" id="eFU-v5-NeX"/>
-                                </connections>
+                                <fontDescription key="fontDescription" name="AquaGrotesque" family="Aqua Grotesque" pointSize="38"/>
+                                <state key="normal" title="CREATE MAZE">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.23921568627450981" green="0.28627450980392155" blue="0.38039215686274508" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="modal" identifier="toMaze" id="Trc-rE-BOK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wdE-GO-as0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
