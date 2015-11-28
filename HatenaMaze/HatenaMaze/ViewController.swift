@@ -12,7 +12,7 @@ import AudioToolbox
 
 class ViewController: UIViewController {
     
-    var playerView: UIView!
+    var playerView: UIImageView!
     var playerMotionManager: CMMotionManager!
     var speedX: Double = 0.0
     var speedY: Double = 0.0
@@ -127,10 +127,10 @@ class ViewController: UIViewController {
                 }
             }
         }
-        
-        playerView = UIView(frame: CGRectMake(0 , 0, screenSize.width / 36, screenSize.height / 60))
+        playerView = UIImageView(frame: CGRectMake(0 , 0, screenSize.width / 36, screenSize.height / 60))
+        let playerImage = UIImage(named: "hatenaPlayerView.png")
+        playerView.image = playerImage
         playerView.center = startView.center
-        playerView.backgroundColor = UIColor.grayColor()
         self.view.addSubview(playerView)
         
         // MotionManagerを生成.

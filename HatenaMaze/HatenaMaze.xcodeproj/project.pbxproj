@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		984A663D1C0961DC00E2CD57 /* ContentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984A663C1C0961DC00E2CD57 /* ContentsViewController.swift */; };
+		984A663F1C0976A900E2CD57 /* hatenaPlayerView.png in Resources */ = {isa = PBXBuildFile; fileRef = 984A663E1C0976A900E2CD57 /* hatenaPlayerView.png */; };
 		985641841C094C8300E06D20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985641831C094C8300E06D20 /* AppDelegate.swift */; };
 		985641861C094C8300E06D20 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985641851C094C8300E06D20 /* ViewController.swift */; };
 		985641891C094C8300E06D20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 985641871C094C8300E06D20 /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		984A663C1C0961DC00E2CD57 /* ContentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentsViewController.swift; path = ../ContentsViewController.swift; sourceTree = "<group>"; };
+		984A663E1C0976A900E2CD57 /* hatenaPlayerView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hatenaPlayerView.png; path = ../hatenaPlayerView.png; sourceTree = "<group>"; };
 		985641801C094C8300E06D20 /* HatenaMaze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HatenaMaze.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		985641831C094C8300E06D20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		985641851C094C8300E06D20 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +84,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		984A66401C0976B600E2CD57 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				984A663E1C0976A900E2CD57 /* hatenaPlayerView.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
 		985641771C094C8200E06D20 = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +115,7 @@
 		985641821C094C8300E06D20 /* HatenaMaze */ = {
 			isa = PBXGroup;
 			children = (
+				984A66401C0976B600E2CD57 /* images */,
 				985641B11C09506500E06D20 /* Defaults-master */,
 				985641831C094C8300E06D20 /* AppDelegate.swift */,
 				985641851C094C8300E06D20 /* ViewController.swift */,
@@ -254,6 +265,7 @@
 				985641B51C09506500E06D20 /* Default-568h@2x.png in Resources */,
 				9856418B1C094C8300E06D20 /* Assets.xcassets in Resources */,
 				985641891C094C8300E06D20 /* Main.storyboard in Resources */,
+				984A663F1C0976A900E2CD57 /* hatenaPlayerView.png in Resources */,
 				985641B61C09506500E06D20 /* Default-667h@2x.png in Resources */,
 				985641B71C09506500E06D20 /* Default-736h@3x.png in Resources */,
 			);
