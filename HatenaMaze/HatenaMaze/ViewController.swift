@@ -9,6 +9,7 @@
 import UIKit
 import CoreMotion
 import AudioToolbox
+import SDWebImage
 
 
 class ViewController: UIViewController {
@@ -76,22 +77,25 @@ class ViewController: UIViewController {
     var wallRectArray = [CGRect]()
     var roadRectArray = [CGRect]()
     
-    var blogImageView: [UIImageView]!
-    
     var lastRoadTouch = NSUserDefaults.standardUserDefaults()
     var lastRoadCenterPoint: CGPoint!
+    
+    var wholeArrayNumber: Int! = 0
+    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        var urlArray = [
+            "https://blog.st-hatena.com/images/theme/og-image-1500.png","http://ecx.images-amazon.com/images/I/51AqI9t8-wL.jpg","http://f.st-hatena.com/images/fotolife/k/kakijiro/20151126/20151126140154.png?1448514129","http://ecx.images-amazon.com/images/I/412kszJSvOL.jpg","https://blog.st-hatena.com/images/theme/og-image-1500.png","http://ecx.images-amazon.com/images/I/518hpUqXcbL.jpg","http://ecx.images-amazon.com/images/I/4192pz+HtXL.jpg","http://cdn-ak.f.st-hatena.com/images/fotolife/s/skky17/20151125/20151125210616.png","https://blog.st-hatena.com/images/theme/og-image-1500.png","http://ecx.images-amazon.com/images/I/612zNITSRNL.jpg","http://ecx.images-amazon.com/images/I/41gQWahIkFL.jpg","http://cdn-ak.f.st-hatena.com/images/fotolife/b/bbshinstp/20151027/20151027000235.jpg","http://ecx.images-amazon.com/images/I/5158RQCY6CL.jpg","http://cdn-ak.f.st-hatena.com/images/fotolife/g/genki-1ban/20151127/20151127095548.jpg","https://blog.st-hatena.com/images/theme/og-image-1500.png","http://ecx.images-amazon.com/images/I/51AqI9t8-wL.jpg","http://f.st-hatena.com/images/fotolife/k/kakijiro/20151126/20151126140154.png?1448514129","http://ecx.images-amazon.com/images/I/412kszJSvOL.jpg","https://blog.st-hatena.com/images/theme/og-image-1500.png"
+        ]
         
         print("WHOLEARRAY == \(wholeArray)")
 
         isDuringGame = false
         
-//        mazeNumber = Int(arc4random_uniform(2))
-        mazeNumber = 2
-
+        mazeNumber = Int(arc4random_uniform(2))
         
         switch mazeNumber {
         case 0:
@@ -121,8 +125,15 @@ class ViewController: UIViewController {
                     wallView.backgroundColor = UIColor.blackColor()
                     view.addSubview(wallView)
                     wallRectArray.append(wallView.frame)
-                    //wallView.addSubview(blogImageView)
-                case 2:
+                    let imageURL = NSURL(string: String(urlArray[wholeArrayNumber]))
+                    let blogImageView = UIImageView(frame: CGRectMake(0, 0, wallView.frame.width, wallView.frame.height * 2 / 3))
+                    blogImageView.sd_setImageWithURL(imageURL)
+                    print(imageURL)
+                    wallView.addSubview(blogImageView)
+                    wholeArrayNumber = wholeArrayNumber + 1
+                    if wholeArrayNumber >= 12 {
+                        wholeArrayNumber = 0
+                    }                case 2:
                     startView = createView(x: x, y: y, width: cellWidth, height: cellHeight, offsetX: cellOffsetX, offsetY: cellOffsetY)
                     startView.backgroundColor = UIColor.greenColor()
                     self.view.addSubview(startView)
@@ -151,6 +162,7 @@ class ViewController: UIViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
         if isDuringGame == true {
             // 加速度を始める
             if !playerMotionManager.accelerometerActive {

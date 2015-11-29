@@ -284,7 +284,7 @@
 				TargetAttributes = {
 					9856417F1C094C8300E06D20 = {
 						CreatedOnToolsVersion = 7.1.1;
-						DevelopmentTeam = ECGZQ9XKG7;
+						DevelopmentTeam = 8X5QXMNH53;
 					};
 					985641931C094C8300E06D20 = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -557,7 +557,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.futagami.HatenaMaze;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "8ae6fe46-2667-4d88-b1f7-c391f28bcdbe";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -572,7 +572,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.futagami.HatenaMaze;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "8ae6fe46-2667-4d88-b1f7-c391f28bcdbe";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
