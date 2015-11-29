@@ -126,7 +126,7 @@ class ViewController: UIViewController {
                     view.addSubview(wallView)
                     wallRectArray.append(wallView.frame)
                     let imageURL = NSURL(string: String(urlArray[wholeArrayNumber]))
-                    let blogImageView = UIImageView(frame: CGRectMake(0, 0, wallView.frame.width, wallView.frame.height * 2 / 3))
+                    let blogImageView = UIImageView(frame: CGRectMake(0, 0, wallView.frame.width, wallView.frame.height))
                     blogImageView.sd_setImageWithURL(imageURL)
                     print(imageURL)
                     wallView.addSubview(blogImageView)
